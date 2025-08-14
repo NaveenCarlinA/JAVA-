@@ -1,0 +1,21 @@
+package DAY2;
+
+import java.util.Scanner;
+
+public class Bitwise {
+
+	public static void main(String[] args) {
+		try (Scanner Scan = new Scanner(System.in)) {
+			System.out.print("Enter the number");
+			int num1= Scan.nextInt();
+			System.out.print("Enter the number");
+			int num2= Scan.nextInt(); 
+			System.out.println(num1<<num2);
+			System.out.println(num1&num2);
+			System.out.println(num1|num2);
+			System.out.print(num1^num2);
+		}
+
+	}
+
+}
