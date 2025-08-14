@@ -1,0 +1,164 @@
+package DAY7;
+
+public class string {
+    public static void main(String[] args) {
+        String str = " Naveen Monish"; 
+        String str1 = "naveen";
+        String str2 = new String("Naveen");
+        String str3 = new String("YellowMatics");
+
+        System.out.println(str == str1);
+
+        System.out.println(str.equals(str1));
+
+        System.out.println(str.equalsIgnoreCase(str1));
+
+        System.out.println(str.length());
+
+        System.out.println(str);
+
+        String[] word = str.split(" ");
+        for (String var : word) {
+            System.out.println(var);
+        }
+
+        System.out.println(str3.substring(5));
+
+        System.out.println(str3.contains("kir"));
+
+        System.out.println(str3.endsWith("cs"));
+
+        System.out.println(str3.charAt(3));
+
+        System.out.println(str3.concat(" Gether"));
+    }
+}
+
+
+package DAY7;
+
+class Withreturntype {
+    public void display(int age, String name) {
+        System.out.println(age + " " + name);
+    }
+}
+
+public class Task2 {
+    public static void main(String[] args) {
+        Withreturntype obj = new Withreturntype();
+        obj.display(10, "ajmal");
+    }
+}
+
+package DAY7;
+
+public class Stringbuffer {
+
+	public static void main(String[] args) {
+		StringBuffer sb=new StringBuffer("hello");
+		System.out.println(sb);
+		sb.append(",world");
+		System.out.println(sb);
+		sb.insert(5, "java");
+		System.out.println(sb);
+		sb.delete(5, 10);
+		System.out.println(sb);
+		sb.reverse();
+		System.out.println(sb);
+		sb.replace(0, 3, "AA");
+		System.out.println(sb);
+
+	}
+
+}
+
+package DAY7;
+//import java.util.Scanner;
+public class withreturntype {
+
+	public void display() {
+		System.out.println("Hi nice to meet you");
+	
+   }
+	public static void main(String[] args) {
+		withreturntype obj=new withreturntype();
+		obj.display();
+		
+	}
+
+}
+
+package DAY7;
+
+public class Task4 {
+
+	public static void main(String[] args) {
+		char ch='c';
+		char ch1=(char)(ch-32);
+		System.out.println(ch1);
+
+	}
+
+}
+
+package DAY7;
+import java.util.Scanner;
+
+public class SumofDigit {
+
+    public int add(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        SumofDigit obj = new SumofDigit();
+        try (Scanner scan = new Scanner(System.in)) {
+            int num = scan.nextInt();
+            int num1 = scan.nextInt();
+            int result = obj.add(num, num1); // Capture the return value
+            System.out.println("Sum: " + result); // Print the result
+        }
+    }
+}
+
+package DAY7;
+import java.util.Scanner;
+public class HwToggle {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String str=scan.nextLine();
+		char[] ch=str.toCharArray();
+		for(int i=0;i<ch.length;i++) {
+			if(ch[i]>='A' && ch[i]<='Z') {//A=65,Z=90,a=97,z=122
+				ch[i]=(char)(ch[i]+32);
+			}
+			else if(ch[i]>='a' && ch[i]<='z') {
+				ch[i]=(char)(ch[i]-32);
+			}
+		}
+		System.out.println(new String(ch));
+	}
+
+}
+
+package DAY7;
+
+public class Withoutreturntype {
+
+	public String display() 
+	{
+		String name="Carlin";
+		return name;
+
+	}
+	public static void main(String[] agrs) {
+		Withoutreturntype obj=new Withoutreturntype();
+		String res=obj.display();
+		System.out.println(res);
+	}
+
+}
+
+
