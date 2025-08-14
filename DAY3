@@ -1,0 +1,179 @@
+package DAY3;
+
+import java.util.Scanner;
+
+public class Assign3Vote{
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the Age: ");
+        int age = scan.nextInt();
+
+        if (age >= 18) {
+            System.out.println("ELIGIBLE TO VOTE");
+        }
+
+        if (age >= 25) {
+            System.out.println("CANDIDATE ELIGIBLE");
+        } else {
+            System.out.println("NOT ELIGIBLE");
+        }
+
+        scan.close(); 
+    }
+}
+package DAY3;
+
+import java.util.Scanner;
+
+public class Assignment {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the value");
+		int num1 = scan.nextInt();
+		if(num1% 3==0 && num1% 5==0) {
+			System.out.println("FIZZBIZZ");
+		
+		}
+		else if(num1% 5==0 ) {
+			System.out.println("BIZZ");
+		}
+		else if(num1% 3==0 ) {
+			System.out.println("FIZZ");
+		}
+		}
+     
+}
+package DAY3;
+
+import java.util.Scanner;
+
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int val = scan.nextInt();
+		if(90 <=val &&  val<=100 ) {
+			System.out.println("A+");
+		}
+		
+		else if(80 <=val && val<=89 ) {
+			System.out.println("A");
+		}
+		else if(70 <=val && val<=79) {
+			System.out.println("B");
+		}
+		else if(60 <=val && val<=69) {
+			System.out.println("c");
+		}
+		else if(50 <=val && val<=59) {
+			System.out.println("D");
+		}
+		else {
+			System.out.println("Fail");
+		}
+		
+	}
+
+}
+package DAY3;
+
+import java.util.Scanner;
+
+public class Conditionalstatement {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int num1 = scan.nextInt();
+		if(num1<8) {
+		System.out.println("The value is grater");
+		}
+		if(num1>10) {
+			System.out.println("the value is lesser");
+		}
+		if(num1==9) {
+		System.out.println("the value is same");
+		}
+		
+		}
+		
+}
+		
+	
+
+
+package DAY3;
+
+import java.util.Scanner;
+
+public class Switch {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a number (1–6): ");
+        int num1 = scan.nextInt();
+
+        switch (num1) {
+            case 1: {
+                System.out.println("Monday");
+                break;
+            }
+            case 2: {
+                System.out.println("Tuesday");
+                break;
+            }
+            case 3: {
+                System.out.println("Wednesday");
+                break;
+            }
+            case 4: {
+                System.out.println("Thursday");
+                break;
+            }
+            case 5: {
+                System.out.println("Friday");
+                break;
+            }
+            case 6: {
+                System.out.println("Saturday");
+                break;
+            }
+            default: {
+                System.out.println("Invalid input. Please enter a number between 1 and 6.");
+            }
+        }
+
+        scan.close(); 
+    }
+}
+package DAY3;
+
+import java.util.Scanner;
+
+public class TASK {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter weight: ");
+        int weight = scan.nextInt();
+
+        if (weight >= 0 && weight <= 100) {
+            System.out.println("Valid");
+
+            if (weight % 2 == 0 && weight != 2) {
+                System.out.println("YES");
+                int a = weight / 2;
+                System.out.println("weight: " + a + " " + a);
+            } else {
+                System.out.println("NO");
+            }
+        } else {
+            System.out.println("Invalid");
+        }
+
+        scan.close();
+    }
+}
+
+		
