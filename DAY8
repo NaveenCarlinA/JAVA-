@@ -1,0 +1,288 @@
+package DAY8; // ✅ Match this exactly with your folder name
+
+public class Constractor {
+    int age;
+    String name;
+
+    Constractor() {
+        System.out.println("Hi from default constructor!");
+    }
+
+    Constractor(int a, String str) {
+        age = a;
+        name = str;
+    }
+
+    void display() {
+        System.out.println("Age: " + age + ", Name: " + name);
+    }
+
+    public static void main(String[] args) {
+        Constractor obj = new Constractor(); 
+
+       
+        Constractor obj1 = new Constractor(20, "Roshan");
+
+       
+        obj1.display();
+    }
+}
+
+package DAY8;
+
+public class Constructoroverloaded {
+    int age;
+    String name;
+
+ 
+    Constructoroverloaded() {
+        System.out.println("Hi from default constructor!");
+    }
+
+   
+    Constructoroverloaded(int a, String str) {
+        System.out.println("Int constructor: " + a + " " + str);
+    }
+
+    Constructoroverloaded(float b) {
+        System.out.println("Float constructor: " + b);
+    }
+
+    public static void main(String[] args) {
+    
+        Constructoroverloaded obj = new Constructoroverloaded(5, "Roshan");
+        
+        Constructoroverloaded obj1 = new Constructoroverloaded(5.5f);
+
+        Constructoroverloaded obj2 = new Constructoroverloaded();
+    }
+}
+
+package DAY8;
+
+	class Animal {
+	    void sound() {
+	        System.out.println("Animal makes a sound");
+	    }
+	}
+
+	class Dog extends Animal {
+	   
+	    void sound() {
+	        System.out.println("Dog barks");
+	    }
+	}
+
+	class Cat extends Animal {
+	   
+	    void sound() {
+	        System.out.println("Cat meows");
+	    }
+	}
+
+	class Cow extends Animal {
+	   
+	    void sound() {
+	        System.out.println("Cow moos");
+	    }
+	}
+
+	public class higher {
+	    public static void main(String[] args) {
+	        Animal a;
+
+	        a = new Dog();
+	        a.sound();
+
+	        a = new Cat();
+	        a.sound();
+
+	        a = new Cow();
+	        a.sound();
+	    }
+	
+
+	}
+
+package DAY8;
+
+
+public class Keyword {
+    int age;
+    String name;
+
+    
+    Keyword(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+   
+    void display() {
+        System.out.println("Age: " + age + ", Name: " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Keyword obj = new Keyword(5, "Roshan");
+
+        
+        obj.display(); 
+    }
+}
+
+
+package DAY8;
+
+public class keyword2 {
+    public static class Main1 {
+        public static void main(String[] args) {
+            System.out.println("Hello from Main1!");
+        }
+
+		public void show() {
+			
+		}
+    }
+
+        void show() {
+            this.display(); 
+            System.out.println("hello show");
+        }
+
+    private void display() {
+			
+		}
+
+	public static void main(String[] args) {
+        Main1 obj = new Main1();
+        obj.show(); 
+    }
+}
+
+package DAY8;
+
+public class Main {
+    String hotelname;
+    int price;
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        Main obj1 = new Main();
+
+        obj.price = 20;
+        obj1.hotelname = "Maran";
+
+        System.out.println(obj.price);
+        System.out.println(obj1.hotelname);
+    }
+}
+
+package DAY8;
+
+
+	class Grandpa {
+	    void display() {
+	        System.out.println("villa");
+	    }
+	}
+
+	class Dad extends Grandpa {
+	    void property() {
+	        System.out.println("house, land, bike");
+	    }
+	}
+
+	class Son extends Dad {
+	    void show() {
+	        System.out.println("bike");
+	    }
+	}
+
+	public class multilevelinheritence {
+	    public static void main(String[] args) {
+	        Son obj = new Son();
+	        obj.display();   
+	        obj.property();  
+	        obj.show();      
+	    }
+	
+	}
+
+package DAY8;
+
+import java.util.Scanner;
+public class StaticMethod {
+    int rollno = 55;
+    String name = "dharsan";
+    static String collegename = "Zion";
+    private static StaticMethod obj;
+
+    void display(int a, String name) {
+        System.out.println(a + " " + name + " " + collegename);
+    }
+
+    public static void main (int a) {
+        collegename = "Mount Zion";
+        System.out.println(a + " " + collegename);
+    }
+
+    public static void main(String[] args) {
+        StaticMethod.main(55);         
+        obj = new StaticMethod();       
+        obj.display(65, "dharsan");    
+    }
+}
+
+
+package DAY8;
+
+public class StaticVariable {
+	int rollno = 55;
+	String name = "Aakash";
+	static String collegename = "Zion";
+	void display(int a, String name)
+	{
+		System.out.println(a+" "+name+" "+collegename);
+	}
+
+	public static void main(String[] args) {
+		StaticVariable
+		obj= new StaticVariable();
+		StaticVariable.collegename="Mount";
+		obj.display(55,"Aakash");
+		obj.display(56, "Arun");
+		obj.display(57, "Ajay");
+		obj.display(58, "Ashwin");
+
+
+		
+	}
+
+}
+
+package DAY8;
+
+public class Task3 {
+    String hotelname;
+    String food;
+    int price;
+
+    public static void main(String[] args) {
+        Task3 obj = new Task3();
+        System.out.println(obj.hotelname); // null
+        System.out.println(obj.price);     
+
+        obj.price = 50;
+        obj.hotelname = "maran";
+
+        System.out.println(obj.price);    
+        System.out.println(obj.hotelname); 
+    }
+}
+
+
+
+
+
+
