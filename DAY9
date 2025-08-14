@@ -1,0 +1,155 @@
+package DAY9;
+
+abstract class Bike{
+    abstract void run();
+}
+
+class Honda extends Bike {
+    
+    void run() {
+        System.out.println("Vehicle is running");
+    }
+}
+
+public class Abstract{
+    public static void main(String[] args) {
+        Bike obj = new Honda();
+        obj.run();
+    }
+}
+
+package DAY9;
+interface Animal{
+	void sound();
+	default void run() {
+		System.out.println("running");
+		
+	}static void eat() {
+		System.out.println("eating");
+	}
+}
+class dog implements Animal{
+	public void sound() {
+		System.out.println("bow,bow");
+	}
+	
+}
+public class Task2 {
+
+	public static void main(String[] args) {
+		dog obj=new dog();
+		obj.sound();
+		
+	}
+
+}
+
+package DAY9;
+interface sum{
+	int max=100;
+	//max=200;
+	void show();
+	static void display() {
+		System.out.println("displaying....");
+	}
+	
+}
+class Myclass implements sum{
+	public void show() {
+		System.out.println("showing");
+	}
+	
+}
+public class Task3 {
+	
+
+	public static void main(String[] args) {
+		sum.display();
+		Myclass obj=new Myclass();
+		obj.show();
+
+	}
+
+}
+
+package DAY9;
+//multiple interface
+interface print{
+	void display();
+}
+interface copy{
+	void show();
+}
+class Xerox implements print,copy{
+	public void display() {
+		System.out.println("displaying...");
+	}
+	public void show() {
+		System.out.println("showing...");
+	}
+}
+
+public class Task4 {
+
+	public static void main(String[] args) {
+		Xerox obj=new Xerox();
+		obj.display();
+		obj.show();
+
+	}
+
+}
+
+package DAY9;
+
+class Animal1 {
+    String colour = "red";
+}
+
+class Bird {
+    String colour = "purple";
+}
+
+class Dog extends Bird {
+    String colour = "white";
+
+    void display() {
+        System.out.println(colour);        // Dog's colour
+        System.out.println(super.colour);  // Bird's colour
+    }
+}
+
+public class Task5 {
+    public static void main(String[] args) {
+        Dog obj = new Dog();
+        obj.display();
+    }
+}package DAY9;
+
+class Animal1 {
+    String colour = "red";
+}
+
+class Bird {
+    String colour = "purple";
+}
+
+class Dog extends Bird {
+    String colour = "white";
+
+    void display() {
+        System.out.println(colour);        // Dog's colour
+        System.out.println(super.colour);  // Bird's colour
+    }
+}
+
+public class Task5 {
+    public static void main(String[] args) {
+        Dog obj = new Dog();
+        obj.display();
+    }
+}
+
+
+
+
